@@ -3,20 +3,16 @@ import { Component, OnInit } from '@angular/core';
 declare var $ : any;
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-shop-page',
+  templateUrl: './shop-page.component.html',
+  styleUrls: ['./shop-page.component.css']
 })
-export class AppComponent implements OnInit {
-  title = 'FreshVegies';
+export class ShopPageComponent implements OnInit {
 
-  ngOnInit():void{
-/*   
+  constructor() { }
 
-
-declare var $ : any;
-
-$(document).ready(function()  {
+  ngOnInit(): void {
+    $(document).ready(function()  {
       let body = <HTMLDivElement> document.body;
       let script = document.createElement('script');
       script.innerHTML='';
@@ -24,11 +20,8 @@ $(document).ready(function()  {
       script.async=true;
       script.defer=true;
       body.appendChild(script);
-    })*/
-  } 
+    })
 
+  }
 
 }
-
-
-
