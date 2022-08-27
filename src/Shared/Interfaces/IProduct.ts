@@ -4,6 +4,7 @@
     productDescription:string,
     productPrice:number,
     categoryId:number,
+    productImage?:string,
     categoryName?:string
     
 }

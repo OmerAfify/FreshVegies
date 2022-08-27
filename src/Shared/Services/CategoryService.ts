@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { ICategory } from "../Models/ICategory";
+import { ICategory } from "../Interfaces/ICategory";
 
 @Injectable()
 export class CategoryService{

@@ -238,14 +238,13 @@
             <div class="row">
                 <div class="col">
                     <div class="product-5 product-m no-arrow">
-                        <app-product-box *ngFor="let product of popularProductsList" [product]="product"></app-product-box>
+                      <app-product-box *ngFor="let product of productList" [product]="product"></app-product-box>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Product slider end -->
-
 
      <!-- parallax product section start -->
      <section class="full-banner parallax tools-parallax-product tab-left ratio_square  tools-grey border-box">
@@ -269,7 +268,7 @@
                             <div *ngFor="let c of categoryList; let j = index" id="tab-{{j+1}}" class="tab-content ">
                                 <div class="product-3 product-m no-arrow">
                                 
-                                 <app-product-box *ngFor="let p of getProductsByCatID(c.categoryId)" [product]="p"></app-product-box>
+                                 <app-product-box *ngFor="let p of productList" [product]="p"></app-product-box>
                      
                                 </div>
                             </div>

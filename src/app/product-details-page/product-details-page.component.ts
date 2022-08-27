@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { IProduct } from 'src/Shared/Models/IProduct';
+import { IProduct } from 'src/Shared/Interfaces/IProduct';
 import { ProductService } from 'src/Shared/Services/ProductService';
 
 declare var $:any; 
@@ -23,7 +23,12 @@ this._route.params.subscribe((params:Params)=>{
   this.productId = params['id'];
 })
 
-this.product = this._productService.getProductById(this.productId);
+this._productService.getProductById(this.productId).subscribe(
+(data)=>{
+  console.log("specifiec data is :"+data)
+  this.product =data;
+  }
+);
 
 
     $(document).ready(function()  {

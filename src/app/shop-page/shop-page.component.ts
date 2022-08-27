@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/Shared/Services/ProductService';
 
 declare var $ : any;
 
@@ -9,9 +10,15 @@ declare var $ : any;
 })
 export class ShopPageComponent implements OnInit {
 
-  constructor() { }
+ productList:any; 
+
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
+
+    this.productService.getAllProducts().subscribe(data=>{this.productList= data; 
+      console.log("Shoppage data loaded")} );
+
     $(document).ready(function()  {
       let body = <HTMLDivElement> document.body;
       let script = document.createElement('script');
@@ -20,6 +27,7 @@ export class ShopPageComponent implements OnInit {
       script.async=true;
       script.defer=true;
       body.appendChild(script);
+      console.log("Shoppage script loaded")
     })
 
   }

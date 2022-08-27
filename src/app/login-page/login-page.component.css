@@ -1,0 +1,13 @@
+input.ng-invalid.ng-touched{
+    border: 1px solid red ;
+    margin-bottom: 5px;
+}
+
+span.help-block{
+    color: red;
+    margin-bottom: 10px;
+}
+
+div.col-lg-12{
+margin:15px 0px 15px
+}

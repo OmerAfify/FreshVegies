@@ -88,9 +88,10 @@
                                         <div class="product-wrapper-grid">
                                             <div class="row margin-res">
                                            
-                                                <div class="col-lg-2 col-6 col-grid-box">
-                                                <app-product-box-shopping-page></app-product-box-shopping-page>
+                                                <div *ngFor="let product of productList" class="col-lg-2 col-6 col-grid-box">
+                                                <app-product-box-shopping-page [product]="product" ></app-product-box-shopping-page>
                                             </div>
+                                           
                                             </div>
                                         </div>
                                         <div class="product-pagination">
